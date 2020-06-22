@@ -5,6 +5,7 @@ alias zshconfig="vim ~/.zshrc"
 alias tmuxconfig="vim ~/.tmux.conf"
 alias vimconfig="vim ~/.vimrc"
 alias sshconfig="vim ~/.ssh/config"
+alias fzfconfig="vim ~/.fzf.zsh"
 alias ls="ls -G"
 alias la="ls -la"
 
@@ -20,9 +21,9 @@ function pluginstall {
 }
 
 # Source research virtualenv
-#function pyenv {
-    # source /research/hutchinson/workspace/dawc/venv/bin/activate
-#}
+function pyenv {
+    source /research/hutchinson/workspace/dawc/venv/bin/activate
+}
 
 # Set up the prompt
 autoload -Uz promptinit
