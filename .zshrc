@@ -8,6 +8,7 @@ alias sshconfig="vim ~/.ssh/config"
 alias fzfconfig="vim ~/.fzf.zsh"
 alias ls="ls -G"
 alias la="ls -la"
+alias ll="ls -l"
 
 # Fuzzy finder function FFF
 function fim {
