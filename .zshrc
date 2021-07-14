@@ -10,20 +10,26 @@ alias ls="ls -G"
 alias la="ls -la"
 alias ll="ls -l"
 
+# Fuzzy finder customization
+export FZF_DEFAULT_OPTS="
+--layout=reverse
+--info=inline
+--height=80%
+--multi
+--preview-window=:hidden
+--preview '([[ -f {} ]] && (bat --style=numbers --color=always {} || cat {})) || ([[ -d {} ]] && (tree -C {} | less)) || echo {} 2> /dev/null | head -200'
+--color='hl:148,hl+:154,pointer:032,marker:010,bg+:237,gutter:008'
+--prompt='∼ ' --pointer='▶' --marker='✓'
+--bind '?:toggle-preview'
+--bind 'ctrl-a:select-all'
+--bind 'ctrl-y:execute-silent(echo {+} | pbcopy)'
+--bind 'ctrl-e:execute(echo {+} | xargs -o vim)'
+--bind 'ctrl-v:execute(code {+})'
+"
+
 # Fuzzy finder function FFF
 function fim {
     vim $(fzf)
-}
-
-# Install vim-plug
-function pluginstall {
-    curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-            https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-}
-
-# Source research virtualenv
-function pyenv {
-    source /research/hutchinson/workspace/dawc/venv/bin/activate
 }
 
 # Set up the prompt
