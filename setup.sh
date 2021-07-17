@@ -19,6 +19,6 @@ for FILE in .*; do
     contains "$excludedFiles" "$FILE"
 
     if [[ $result -eq 0 ]]; then
-        ln -s "$FILE" ~/"$FILE"
+        ln -s "$PWD"/"$FILE" "$HOME"/"$FILE"
     fi
 done
