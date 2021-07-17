@@ -1,5 +1,7 @@
 eval $(ssh-agent)
 
+PROMPT='%F{green}%*%f:%F{blue}%~%f %% '
+
 # Aliases
 alias zshconfig="vim ~/.zshrc"
 alias tmuxconfig="vim ~/.tmux.conf"
