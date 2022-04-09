@@ -10,7 +10,7 @@ filetype plugin indent on
 syntax on
 
 " fzf Fuzzy finder
-set rtp+=~/.fzf
+set rtp+=/usr/local/opt/fzf
 
 " 4 spaces for tabs
 set tabstop=4
@@ -23,7 +23,7 @@ set number
 " set relativenumber
 
 " Colorscheme
-"colors zenburn
+colors zenburn
 
 " Highlight the 80th column
 set cursorline
