@@ -1,5 +1,17 @@
 ####### 50 characters ###########################
-Subject
+<type>(<scope>): <subject>
+# Type:
+#   - chore: updating tasks; no production code change
+#   - docs: changes to the documentation
+#   - feat: new feature for the user, not a new feature for build script
+#   - fix: bug fix for the user, not a fix to a build script
+#   - refactor: refactoring production code, e.g. renaming a variable
+#   - style: formatting, missing semi colons, etc; no production code change
+#   - test: adding missing tests, refactoring tests; no production code change
+#
+# Scope: optional, additional context of changes
+#
+# Subject: summary in present tense
 
 ####### 72 characters #################################################
 Problem
